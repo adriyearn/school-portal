@@ -1,0 +1,914 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head> <title>AIMS </title>
+    <link rel="shortcut icon" href="assets/img/pics/utiicon.png" type="image/x-icon"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Table - Brand</title><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=0c4a3ad20bd58d8e35928fe28ce27bcd"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=a17903279b8971202bb62c98e08ac79b"></head><body id="page-top"><div id="wrapper"><nav class="sidebar"><style>
+:root {
+    --school-primary: #003366;
+    --school-secondary: #FFD700;
+    --school-accent: #8B0000;
+}
+
+.sidebar {
+    background: var(--school-primary);
+    width: 280px;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    border-right: 3px solid var(--school-secondary);
+}
+
+.sidebar-brand {
+    padding: 1.5rem 0;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.school-logo {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--school-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInDown 0.8s ease-out;
+    position: relative;
+}
+
+.school-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--school-accent);
+}
+
+.nav-item {
+    position: relative;
+    margin: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    animation: slideInLeft 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.2s; }
+.nav-item:nth-child(2) { animation-delay: 0.3s; }
+.nav-item:nth-child(3) { animation-delay: 0.4s; }
+.nav-item:nth-child(4) { animation-delay: 0.5s; }
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 1rem 1.5rem !important;
+    display: flex !important;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-link i {
+    width: 25px;
+    font-size: 1.1rem;
+    color: var(--school-secondary);
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-left-color: var(--school-accent);
+}
+
+.nav-link:hover:not(.active) {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#sidebarToggle {
+    background: var(--school-secondary) !important;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 2rem;
+    right: -20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#sidebarToggle:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+    
+    .sidebar-brand span {
+        display: none;
+    }
+    
+    .nav-link span {
+        display: none;
+    }
+    
+    .nav-link i {
+        margin-right: 0;
+    }
+    
+    #sidebarToggle {
+        right: -15px;
+    }
+}
+.school-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-brand-icon {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar-brand-icon img {
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+    transition: all 0.3s ease;
+}
+
+.school-logo span {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--school-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.school-logo span::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--school-accent);
+}
+
+</style><div class="container-fluid d-flex flex-column p-0"><a class="d-flex flex-column align-items-center sidebar-brand py-4 mb-3" href="#">
+    <div class="text-center school-logo">
+        <div class="sidebar-brand-icon">
+            <img src="assets/img/pics/utiicon.png" alt = "School logo" class="scool logo-img"></div><span> ITU </span>
+    </div></a>
+<li class="nav-item"><a class="nav-link" href="/index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li><li class="nav-item"><a class="nav-link" href="/profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li><li class="nav-item"><a class="nav-link" href="/grades.html"><i class="fas fa-chart-bar"></i><span>Grades</span></a></li><li class="nav-item"><a class="nav-link" href="/schedule.html"><i class="fas fa-calendar-alt"></i><span>Schedule</span></a></li><li class="nav-item"><a class="nav-link" href="/registration.html"><i class="fas fa-plus-circle"></i><span>Registration</span></a></li><li class="nav-item"><a class="nav-link active" href="/accounting.html"><i class="fas fa-calculator"></i><span>Accounting</span></a></li><li class="nav-item"><a class="nav-link" href="/calendar.html"><i class="fas fa-calendar-check"></i><span>Calendar</span></a></li></ul><button class="btn border-0 rounded-circle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button></div></nav><div class="d-flex flex-column" id="content-wrapper"><div id="content"><nav class="navbar navbar-expand top-bar">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+:root {
+    --school-primary: #003366;
+    --school-secondary: #FFD700;
+    --school-accent: #8B0000;
+}
+
+.top-bar {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    color: var(--school-primary) !important;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    display: flex !important;
+    align-items: center;
+}
+
+.dropdown-toggle:hover {
+    transform: scale(1.1);
+    color: var(--school-accent) !important;
+}
+
+.dropdown-menu {
+    border: 2px solid var(--school-primary);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    animation: slideIn 0.25s ease-out;
+    min-width: 180px;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+    color: var(--school-primary);
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 51, 102, 0.05);
+    transform: translateX(5px);
+    color: var(--school-accent);
+}
+
+.btn-logout {
+    color: var(--school-accent) !important;
+    font-weight: 500;
+}
+</style>
+    <div id="content-wrapper">
+        <nav class="navbar navbar-expand bg-white" style="border-bottom: 2px solid var(--school-secondary); padding: 0.25rem 1rem;">
+            <div class="container-fluid">
+                <div class="ms-auto"></div>
+                <ul class="navbar-nav" style="gap: 0.5rem;">
+                    <li class="nav-item">
+                        <a class="nav-link btn-logout" href="#" id="logoutBtn" 
+                           style="color: var(--school-primary); 
+                                  padding: 0.25rem 0.75rem;
+                                  font-size: 0.9rem;
+                                  border-radius: 4px;
+                                  transition: all 0.2s ease;">
+                            <i class="fas fa-sign-out-alt me-1" style="color: var(--school-accent); font-size: 0.8rem;"></i>
+                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+        
+   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</script><div class="container-fluid"><div class="d-sm-flex justify-content-between align-items-center mb-4"></div><script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (confirm('Are you sure you want to logout?')) {
+                
+                    sessionStorage.removeItem('authToken');
+                    // Redirect to the correct login page
+                    window.location.href = '/login.html'; // Update path as needed
+                }
+            });
+        } else {
+            console.error('Logout button not found!');
+        }
+    });</script><div class="container-fluid"><nav class="navbar navbar-expand top-bar"><style>
+:root {
+    --school-primary: #003366;
+    --school-secondary: #FFD700;
+    --school-accent: #8B0000;
+}
+
+
+.top-bar {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    color: var(--school-primary) !important;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    display: flex !important;
+    align-items: center;
+}
+
+.dropdown-toggle:hover {
+    transform: scale(1.1);
+    color: var(--school-accent) !important;
+}
+
+.dropdown-menu {
+    border: 2px solid var(--school-primary);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    animation: slideIn 0.25s ease-out;
+    min-width: 180px;
+    display: block; 
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0;
+    left: auto;
+}
+
+.show .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item {
+    color: var(--school-primary);
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 51, 102, 0.05);
+    transform: translateX(5px);
+    color: var(--school-accent);
+}
+
+.dropdown-divider {
+    border-color: rgba(0, 51, 102, 0.1);
+}
+
+.fa-cog, .fa-sign-out-alt {
+    color: var(--school-primary);
+    width: 1.5rem;
+    margin-right: 8px;
+}
+
+.btn-logout {
+    color: var(--school-accent) !important;
+    font-weight: 500;
+}
+
+
+</style></nav><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script><div class="card shadow"><div class="card-header py-3"><p class="text-primary m-0 fw-bold">Accounting Information</p></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Portal - Accounting</title>
+    <style>:root {
+    /* Core Color Scheme */
+    --school-primary: #003366;   /* Deep Navy Blue */
+    --school-secondary: #FFD700; /* Academic Gold */
+    --school-accent: #8B0000;    /* Crimson Accent */
+
+    /* Status Colors */
+    --status-paid: #2E8B57;      /* Sea Green */
+    --status-pending: #FF8C00;   /* Dark Orange */
+    --status-overdue: #DC143C;   /* Crimson */
+
+    /* Background Variants */
+    --bg-success: rgba(34, 139, 34, 0.1);
+    --bg-warning: rgba(255, 140, 0, 0.1);
+    --bg-danger: rgba(220, 20, 60, 0.1);
+    --bg-info: rgba(30, 144, 255, 0.1);
+
+    /* General Colors */
+    --text-light: #f8f9fa;
+    --text-dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--text-light);
+    color: var(--text-dark);
+}
+
+/* General Card Styling */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in-out;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.4rem 0.9rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-badge.paid {
+    background: var(--bg-success);
+    color: var(--status-paid);
+    border: 1px solid var(--status-paid);
+}
+
+.status-badge.pending {
+    background: var(--bg-warning);
+    color: var(--status-pending);
+    border: 1px solid var(--status-pending);
+}
+
+.status-badge.overdue {
+    background: var(--bg-danger);
+    color: var(--status-overdue);
+    border: 1px solid var(--status-overdue);
+}
+
+/* Sidebar and Navbar */
+.school-primary-bg {
+    background: linear-gradient(135deg, var(--school-primary), #002244);
+    color: white;
+}
+
+/* Button Styles */
+.btn {
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.school-btn-primary {
+    background: var(--school-primary);
+    color: white;
+    border: 2px solid var(--school-primary);
+}
+
+.school-btn-primary:hover {
+    background: var(--school-secondary);
+    border-color: var(--school-secondary);
+    color: var(--text-dark);
+}
+
+.school-btn-secondary {
+    background: white;
+    color: var(--school-primary);
+    border: 2px solid var(--school-primary);
+}
+
+.school-btn-secondary:hover {
+    background: var(--school-primary);
+    color: white;
+}
+
+/* Table Styling */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: rgba(0, 51, 102, 0.03);
+}
+
+.table-hover tbody tr:hover {
+    background: rgba(0, 51, 102, 0.05);
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    background: var(--school-primary);
+    color: white;
+}
+
+/* Modal Enhancements */
+.modal-content {
+    border: 2px solid var(--school-primary);
+    border-radius: 0.75rem;
+}
+
+.modal-header {
+    border-bottom: 2px solid rgba(0, 51, 102, 0.1);
+}
+
+/* Summary Cards */
+.summary-item {
+    position: relative;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    background: white;
+    border-left: 4px solid var(--school-primary);
+}
+
+.summary-item h3 {
+    font-size: 0.95rem;
+    color: var(--school-primary);
+    margin-bottom: 0.75rem;
+}
+
+.amount {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+}
+
+/* Invoice Section */
+.invoice-header {
+    border-bottom: 2px solid var(--school-primary);
+    padding-bottom: 1rem;
+}
+
+/* Alerts */
+.alert-school {
+    background: rgba(0, 51, 102, 0.05);
+    border-left: 4px solid var(--school-primary);
+    color: var(--text-dark);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .table-responsive {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        overflow-x: auto;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+    </style>
+<div class="container-fluid school-portal">
+    <div class="row g-3">
+        <header class="col-12">
+            
+        </header>
+
+        <!-- Ledger Section -->
+        <section class="col-md-8" aria-labelledby="ledgerHeading">
+            <div class="card financial-ledger animate__slideInLeft">
+                <div class="card-header school-primary-bg">
+                    <h2 id="ledgerHeading" class="h5 mb-0">
+                        <i class="fas fa-receipt me-2" aria-hidden="true"></i>
+                        Payment Ledger
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle" aria-describedby="ledgerSummary">
+                            <caption class="visually-hidden">Financial transactions and payment details</caption>
+                            <thead class="school-primary-bg-light">
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Transaction</th>
+                                    <th scope="col" class="text-end">Amount</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col" class="text-center">Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ledger-row">
+                                    <td><time datetime="2025-02-15">02/15/2025</time></td>
+                                    <td>
+                                        <div class="transaction-type">
+                                            <i class="fas fa-book text-primary me-2" aria-hidden="true"></i>
+                                            Tuition Fee - 1st Semester
+                                        </div>
+                                    </td>
+                                    <td class="text-accent text-end">₱15,000.00</td>
+                                    <td>
+                                        <span class="status-badge paid">
+                                            <i class="fas fa-check-circle me-1" aria-hidden="true"></i>
+                                            Paid
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm school-btn-secondary" 
+                                                aria-label="View invoice for Tuition Fee - 1st Semester"
+                                                onclick="openModal('invoiceModal')">
+                                            <i class="fas fa-file-invoice" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="ledgerSummary" class="ledger-summary mt-4">
+                        <div class="row g-2">
+                            <div class="col-md-4">
+                                <div class="summary-item card h-100">
+                                    <div class="card-body">
+                                        <h3 class="h6">Total Balance</h3>
+                                        <div class="amount text-danger">₱15,000.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="summary-item card h-100">
+                                    <div class="card-body">
+                                        <h3 class="h6">Total Paid</h3>
+                                        <div class="amount text-success">₱5,000.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="summary-item card h-100">
+                                    <div class="card-body">
+                                        <h3 class="h6">Due Date</h3>
+                                        <div class="date text-primary">
+                                            <time datetime="2024-03-15">March 15, 2025</time>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Permits Section -->
+        <section class="col-md-4" aria-labelledby="permitsHeading">
+            <div class="card permits-card animate__slideInRight">
+                <div class="card-header school-primary-bg">
+                    <h2 id="permitsHeading" class="h5 mb-0">
+                        <i class="fas fa-file-signature me-2" aria-hidden="true"></i>
+                        Student Permits
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="permit-category">
+                        <h3 class="h6"><i class="fas fa-graduation-cap me-2"></i>Academic Permits</h3>
+                        <div class="permit-item card mb-2">
+                            <div class="card-body">
+                                <div class="permit-info d-flex justify-content-between mb-2">
+                                    <span class="permit-name fw-bold">Library Access</span>
+                                    <span class="permit-status approved">
+                                        <i class="fas fa-check-circle me-1" aria-hidden="true"></i>
+                                        Approved
+                                    </span>
+                                </div>
+                                <div class="permit-meta d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Valid until: <time datetime="2024-05-30">05/30/2025</time></small>
+                                    <button class="btn btn-sm school-btn-primary" 
+                                            aria-label="Download Library Access permit">
+                                        <i class="fas fa-download me-1" aria-hidden="true"></i>
+                                        Download
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="permit-category mt-4">
+                        <h3 class="h6"><i class="fas fa-building me-2"></i>Administrative Permits</h3>
+                        <div class="permit-item card mb-2">
+                            <div class="card-body">
+                                <div class="permit-info d-flex justify-content-between mb-2">
+                                    <span class="permit-name fw-bold">Lab Access</span>
+                                    <span class="permit-status pending">
+                                        <i class="fas fa-clock me-1" aria-hidden="true"></i>
+                                        Pending
+                                    </span>
+                                </div>
+                                <div class="permit-meta d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Submitted: <time datetime="2024-02-01">02/01/2025</time></small>
+                                    <button class="btn btn-sm school-btn-secondary" 
+                                            disabled 
+                                            aria-label="Lab Access permit pending approval">
+                                        <i class="fas fa-clock me-1" aria-hidden="true"></i>
+                                        Pending
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Invoice Modal -->
+<div id="invoiceModal" class="modal" tabindex="-1" aria-labelledby="invoiceModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+ <div class="modal-content">
+<div class="modal-header school-primary-bg">
+<h2 id="invoiceModalLabel" class="modal-title h5">Official Payment Invoice</h2>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+ <div class="modal-body">
+ <!-- Invoice Header -->
+    <div class="invoice-header mb-4">
+ <div class="row">
+<div class="col-md-6">
+ <img src="assets/img/pics/utiicon.png" class="mb-3" style="height: 60px;">
+ <address class="text-muted">
+                                <strong>Prestige University</strong><br>
+                                123 Academic Avenue<br>
+                                Metro Manila, Philippines 1000<br>
+                                Tel: (02) 1234-5678<br>
+                                VAT Reg No: 123-456-789-000
+                            </address>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <h3 class="h4 mb-3">Invoice #INV-2024-015</h3>
+                            <div class="mb-2">
+                                <strong>Invoice Date:</strong> 
+                                <time datetime="2024-02-20">February 20, 2024</time>
+                            </div>
+                            <div class="mb-2">
+                                <strong>Due Date:</strong> 
+                                <time datetime="2024-03-15">March 15, 2024</time>
+                            </div>
+                            <span class="badge bg-success fs-6">Payment Due</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Information -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="h6 text-primary">Bill To:</h4>
+                                <address>
+                                    <strong>Juan Dela Cruz</strong><br>
+                                    Student ID: 2024-12345<br>
+                                    BSA - 2nd Year<br>
+                                    juan.delacruz@email.com<br>
+                                    +63 912 345 6789
+                                </address>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="h6 text-primary">Payment Method:</h4>
+                                <p class="mb-1">
+                                    <i class="fas fa-university me-2"></i>
+                                    Bank Transfer
+                                </p>
+                                <div class="text-muted small">
+                                    <div>Account Name: Prestige University</div>
+                                    <div>Account Number: 123-456-789-0</div>
+                                    <div>Bank Name: Philippine National Bank</div>
+                                    <div>SWIFT Code: PNBMPHMM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invoice Items -->
+                <div class="table-responsive mb-4">
+                    <table class="table table-bordered">
+                        <thead class="school-primary-bg text-white">
+                            <tr>
+                                <th>#</th>
+                                <th>Description</th>
+                                <th class="text-end">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div class="fw-bold">Tuition Fee - 1st Semester 2024</div>
+                                    <div class="text-muted small">BSA Program - 18 Units</div>
+                                </td>
+                                <td class="text-end">₱12,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <div class="fw-bold">Laboratory Fees</div>
+                                    <div class="text-muted small">Science Lab Access</div>
+                                </td>
+                                <td class="text-end">₱2,500.00</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <div class="fw-bold">Library Fee</div>
+                                    <div class="text-muted small">Annual Access Fee</div>
+                                </td>
+                                <td class="text-end">₱500.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Invoice Summary -->
+                <div class="row justify-content-end">
+                    <div class="col-md-4">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-end">Subtotal:</th>
+                                        <td class="text-end">₱15,000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-end">Late Fee:</th>
+                                        <td class="text-end">₱0.00</td>
+                                    </tr>
+                                    <tr class="table-active">
+                                        <th class="text-end">Total Due:</th>
+                                        <td class="text-end fw-bold text-primary">₱15,000.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Instructions -->
+                <div class="alert alert-school mt-4">
+                    <h5 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Payment Instructions</h5>
+                    <ul class="mb-0">
+                        <li>Payments must be made in Philippine Pesos (₱)</li>
+                        <li>Include student ID and invoice number in payment reference</li>
+                        <li>Allow 3-5 business days for payment processing</li>
+                        <li>Late payments incur 2% monthly interest</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn school-btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-2"></i>Close
+                </button>
+                <button type="button" class="btn school-btn-primary" onclick="window.print()">
+                    <i class="fas fa-print me-2"></i>Print Invoice
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced modal handling
+    function openModal(modalId) {
+        const modal = new bootstrap.Modal(document.getElementById(modalId));
+        modal.show();
+    }
+
+    // Add keyboard navigation to table rows
+    document.querySelectorAll('.ledger-row').forEach(row => {
+        row.addEventListener('click', (e) => {
+            if(e.target.tagName !== 'BUTTON') {
+                openModal('invoiceModal');
+            }
+        });
+        
+        row.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                openModal('invoiceModal');
+            }
+        });
+    });
+
+    // hover effects 
+    document.querySelectorAll('.permit-item').forEach(item => {
+        item.style.transition = 'transform 0.2s ease';
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateX(5px)';
+        });
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'none';
+        });
+    });
+});
+
+</script>
+</body>
+</html>

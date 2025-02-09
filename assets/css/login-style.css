@@ -1,0 +1,166 @@
+:root {
+    --school-primary: #003366;
+    --school-secondary: #FFD700;
+    --school-accent: #8B0000;
+}
+
+.school-login {
+    background: transparent;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.university-title {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    color: var(--school-primary);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 0.5rem;
+    letter-spacing: 1.2px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.login-card {
+    border: none;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    animation: slideInUp 0.8s ease-out;
+    padding: 2rem;
+    max-width: 400px;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.form-control-user {
+    border: 2px solid rgba(0, 51, 102, 0.2);
+    transition: all 0.3s ease;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.form-control-user:focus {
+    border-color: var(--school-primary);
+    box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--school-primary);
+    border: none;
+    padding: 0.9rem 1.5rem;
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--school-secondary);
+    color: var(--school-primary);
+    transform: scale(1.05);
+}
+
+.school-link {
+    color: var(--school-accent);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.school-link:hover {
+    color: var(--school-primary);
+}
+
+.school-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--school-secondary);
+    transition: width 0.3s ease;
+}
+
+.school-link:hover::after {
+    width: 100%;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .university-title {
+        font-size: 1.5rem;
+    }
+    
+    .login-card {
+        margin: 0 1rem;
+        backdrop-filter: blur(8px);
+    }
+}
+
+.school-logo {
+    width: 80px;
+    height: auto;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+.logo-title-container {
+    max-width: 90%;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.logo-title-container {
+    max-width: 90%;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.university-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--school-primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+    .logo-title-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .university-title {
+        font-size: 1.4rem;
+    }
+    
+    .school-logo {
+        width: 70px;
+    }
+}
