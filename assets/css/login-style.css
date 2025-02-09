@@ -4,12 +4,17 @@
     --school-accent: #8B0000;
 }
 
+body {
+    font-size: 16px;
+}
+
 .school-login {
     background: transparent;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .university-title {
@@ -22,6 +27,8 @@
     padding-bottom: 0.5rem;
     letter-spacing: 1.2px;
     animation: fadeInDown 1s ease-out;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .login-card {
@@ -32,7 +39,8 @@
     border-radius: 1rem;
     transition: all 0.3s ease;
     animation: slideInUp 0.8s ease-out;
-    padding: 2rem;
+    padding: 1.5rem;
+    width: 100%;
     max-width: 400px;
 }
 
@@ -44,7 +52,7 @@
 .form-control-user {
     border: 2px solid rgba(0, 51, 102, 0.2);
     transition: all 0.3s ease;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1rem;
     border-radius: 0.75rem;
     background: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
@@ -58,7 +66,7 @@
 .btn-primary {
     background-color: var(--school-primary);
     border: none;
-    padding: 0.9rem 1.5rem;
+    padding: 0.75rem 1rem;
     transition: all 0.3s ease;
     border-radius: 0.75rem;
     font-size: 1rem;
@@ -107,60 +115,62 @@
     100% { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 768px) {
-    .university-title {
-        font-size: 1.5rem;
-    }
-    
-    .login-card {
-        margin: 0 1rem;
-        backdrop-filter: blur(8px);
-    }
-}
-
 .school-logo {
-    width: 80px;
+    width: 60px;
     height: auto;
     mix-blend-mode: multiply;
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
 .logo-title-container {
-    max-width: 90%;
-    flex-wrap: nowrap;
+    max-width: 100%;
+    flex-direction: column;
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-
-.logo-title-container {
-    max-width: 90%;
-    flex-wrap: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.university-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--school-primary);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-@media (max-width: 768px) {
-    .logo-title-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-    
+@media (min-width: 576px) {
     .university-title {
         font-size: 1.4rem;
     }
-    
+
     .school-logo {
         width: 70px;
+    }
+
+    .login-card {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .university-title {
+        font-size: 1.6rem;
+    }
+
+    .logo-title-container {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .school-logo {
+        width: 80px;
+    }
+
+    .form-control-user {
+        padding: 1rem 1.5rem;
+    }
+
+    .btn-primary {
+        padding: 0.9rem 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .university-title {
+        font-size: 1.8rem;
     }
 }
