@@ -1,0 +1,220 @@
+:root {
+    --school-primary: #003366;  /* Deep Navy Blue */
+    --school-secondary: #FFD700;  /* Academic Gold */
+    --school-accent: #8B0000;  /* Crimson Accent */
+    --school-light: #f8f9fa;  /* Light Background */
+    --school-dark: #212529;  /* Dark Theme */
+}
+
+.school-portal {
+    background: linear-gradient(135deg, var(--school-light) 20%, #e9ecef 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background: var(--school-primary);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar Branding */
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.navbar a {
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--school-secondary);
+}
+
+/* Responsive Navbar Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 250px; /* Leave space for sidebar */
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+/* UNIVERSITY TITLE */
+.university-title {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    color: var(--school-primary);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.university-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: var(--school-secondary);
+}
+
+/* DASHBOARD CARDS */
+.card {
+    border-left: 5px solid var(--school-primary);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: white;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--school-primary);
+}
+
+.card-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: var(--school-secondary);
+}
+
+/* SECTIONS */
+.section-title {
+    color: var(--school-primary);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 100%;
+    background: var(--school-secondary);
+}
+
+/* ANNOUNCEMENTS & QUICK LINKS */
+.announcements-list,
+.quick-links-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.announcement-item,
+.quick-link-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.quick-link-item {
+    cursor: pointer;
+}
+
+.quick-link-item:hover {
+    background: var(--school-primary);
+    color: white;
+    transform: translateX(10px);
+}
+
+.quick-link-item:hover::before {
+    content: '»';
+    position: absolute;
+    left: -20px;
+    color: var(--school-secondary);
+    animation: bulletPoint 0.5s ease-out forwards;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--school-primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* ANIMATIONS */
+@keyframes bulletPoint {
+    0% { left: -20px; }
+    100% { left: 10px; }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar Adjustments */
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    /* Reduce title size */
+    .university-title {
+        font-size: 1.5rem;
+    }
+
+    /* Stack cards in a single column */
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

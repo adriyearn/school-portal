@@ -1,6 +1,8 @@
 <!DOCTYPE html><html data-bs-theme="light" lang="en"><head> <title>AIMS </title>
-    <link rel="shortcut icon" href="assets/img/pics/utiicon.png" type="image/x-icon"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Dashboard - Brand</title><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=0c4a3ad20bd58d8e35928fe28ce27bcd"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=a17903279b8971202bb62c98e08ac79b"></head><body id="page-top"><div id="wrapper"><nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark animate-slide-in"><div class="container-fluid p-0"><nav class="sidebar"><style>
-
+    <link rel="shortcut icon" href="assets/img/pics/utiicon.png" type="image/x-icon"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Dashboard - Brand</title><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=0c4a3ad20bd58d8e35928fe28ce27bcd"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="/assets/css/styles.min.css?h=a17903279b8971202bb62c98e08ac79b"></head><body id="page-top"><div id="wrapper"><nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark animate-slide-in"><div class="container-fluid p-0"><nav class="sidebar">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+<script src="assets/js(1)/log-out.script.js"></script>
+<style>
 </style><nav class="sidebar"><style>
 :root {
     --school-primary: #003366;
@@ -257,10 +259,9 @@
 </style><div class="d-flex flex-column" id="content-wrapper"><div id="content">
 <div id="content-wrapper">
     <nav class="navbar navbar-expand bg-white" style="border-bottom: 2px solid var(--school-secondary); padding: 0.25rem 1rem;">
-        <div class="container-fluid">
-            <div class="ms-auto"></div>
-            
-            <!-- Compact Logout Button -->
+<div class="container-fluid">
+<div class="ms-auto"></div>
+<!-- Compact Logout Button -->
             <ul class="navbar-nav" style="gap: 0.5rem;">
                 <li class="nav-item">
                     <a class="nav-link btn-logout" href="#" id="logoutBtn" 
@@ -278,28 +279,7 @@
     </nav>
 
     
-</div><script>
-function logoutUser() {
-    alert("You have been logged out.");
-    window.location.href = "/login.html";
-}
-</script><div class="container-fluid"><div class="d-sm-flex justify-content-between align-items-center mb-4"></div><script>
-document.addEventListener('DOMContentLoaded', function() {
-    const logoutBtn = document.getElementById('logoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (confirm('Are you sure you want to logout?')) {
-                sessionStorage.removeItem('authToken');
-                // Redirect to the correct login page
-                window.location.href = '/login.html'; 
-            }
-        });
-    } else {
-        console.error('Logout button not found!');
-    }
-});
-</script><!-- Start: Chart --><div class="row"><div class="container-fluid p-4 school-portal">
+</div><!-- Start: Chart --><div class="row"><div class="container-fluid p-4 school-portal">
     <div class="row g-3">
         
         <header class="col-12 text-center mb-4">
@@ -327,200 +307,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </section>
         </main>
-
-       
-<style>
-    :root {
-    --school-primary: #003366;  /* Deep Navy Blue */
-    --school-secondary: #FFD700;  /* Academic Gold */
-    --school-accent: #8B0000;  /* Crimson Accent */
-    --school-light: #f8f9fa;  /* Light Background */
-    --school-dark: #212529;  /* Dark Theme */
-}
-
-.school-portal {
-    background: linear-gradient(135deg, var(--school-light) 20%, #e9ecef 100%);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* NAVIGATION BAR */
-.navbar {
-    background: var(--school-primary);
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.navbar a {
-    color: white;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.navbar a:hover {
-    color: var(--school-secondary);
-}
-
-/* MAIN CONTENT */
-.main-content {
-    margin-left: 270px; /* Leave space for sidebar */
-    padding: 2rem;
-    flex-grow: 1;
-}
-
-/* UNIVERSITY TITLE */
-.university-title {
-    font-family: 'PT Serif', serif;
-    font-weight: 700;
-    color: var(--school-primary);
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    padding-bottom: 0.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-.university-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 3px;
-    background: var(--school-secondary);
-    animation: titleUnderline 1.5s ease-out;
-}
-
-/* DASHBOARD CARDS */
-.card {
-    border-left: 5px solid var(--school-primary);
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    background: white;
-    padding: 1.5rem;
-    position: relative;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--school-primary);
-}
-
-.card-icon {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 2rem;
-    color: var(--school-secondary);
-}
-
-/* SECTIONS */
-.section-title {
-    color: var(--school-primary);
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    position: relative;
-    padding-left: 1rem;
-}
-
-.section-title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 100%;
-    background: var(--school-secondary);
-}
-
-/* ANNOUNCEMENTS & LINKS */
-.announcements-list,
-.quick-links-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.announcement-item,
-.quick-link-item {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background: white;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.quick-link-item {
-    cursor: pointer;
-}
-
-.quick-link-item:hover {
-    background: var(--school-primary);
-    color: white;
-    transform: translateX(10px);
-}
-
-.quick-link-item:hover::before {
-    content: '»';
-    position: absolute;
-    left: -20px;
-    color: var(--school-secondary);
-    animation: bulletPoint 0.5s ease-out forwards;
-}
-
-/* FOOTER */
-.footer {
-    background: var(--school-primary);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-/* ANIMATIONS */
-@keyframes titleUnderline {
-    0% { width: 0; }
-    100% { width: 120px; }
-}
-
-@keyframes bulletPoint {
-    0% { left: -20px; }
-    100% { left: 10px; }
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 992px) {
-    .main-content {
-        margin-left: 0;
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .university-title {
-        font-size: 1.5rem;
-    }
-}
-
-
-</style></body></html>
+</body></html>
